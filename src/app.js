@@ -7,8 +7,9 @@ import __dirname from "./utils.js";
 
 
 const app = express();
+const PORT = process.env.PORT || 8080;
 
-const server = app.listen(8080, () => console.log('Listening on PORT 8080'));
+const server = app.listen(PORT, () => console.log('Listening on PORT 8080'));
 
 app.engine('handlebars', handlebars.engine());
 app.set('views', `${__dirname}/views`);
